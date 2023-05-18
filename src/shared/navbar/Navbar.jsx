@@ -40,6 +40,7 @@ const Navbar = ({
       top="0px"
       left="0px"
       zIndex={100}
+      id="nav-menu"
     >
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <IconButton
@@ -67,22 +68,34 @@ const Navbar = ({
           </Box>
           <Box display={{ base: "none", md: "flex" }}>
             <Box onClick={scrollToHome}>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/" className="nav-link home">
+                Home
+              </NavLink>
             </Box>
             <Box onClick={scrollToSection}>
-              <NavLink to="/about">About Me</NavLink>
+              <NavLink className="nav-link about" to="/about">
+                About Me
+              </NavLink>
             </Box>
 
             <Box onClick={scrollToSkills}>
-              <NavLink to="/skills">Skills</NavLink>
+              <NavLink className="nav-link skills" to="/skills">
+                Skills
+              </NavLink>
             </Box>
             <Box onClick={scrollToProject}>
-              <NavLink to="/projects">Projects</NavLink>
+              <NavLink to="/projects" className="nav-link projects">
+                Projects
+              </NavLink>
             </Box>
             <Box onClick={scrollToContact}>
-              <NavLink to="/contact">Contact</NavLink>
+              <NavLink to="/contact" className="nav-link contact">
+                Contact
+              </NavLink>
             </Box>
-            <NavLink to="/resume">Resume</NavLink>
+            <NavLink to="/resume" className="nav-link resume">
+              Resume
+            </NavLink>
           </Box>
           <Box display={{ base: "none", md: "flex" }}>
             <Button

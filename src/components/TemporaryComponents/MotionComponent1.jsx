@@ -33,6 +33,7 @@ const MotionComponent1 = () => {
         marginBottom: "20px",
       }}
       ref={ref}
+      className="project-card"
     >
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
@@ -60,14 +61,31 @@ const MotionComponent1 = () => {
               w="100%"
             >
               <Box p={2} borderRadius="md">
-                <Text color="white" fontSize="1.2xl">
-                  <b>RECOVERY :</b> A web application that provides educational
-                  content and resources related to mental health.
+                <Text
+                  color="#fc5130"
+                  fontSize="1.2xl"
+                  fontWeight="extrabold"
+                  letterSpacing="1px"
+                  className="project-title"
+                >
+                  <u>RECOVERY</u>
+                </Text>
+                <Text
+                  color="white"
+                  fontSize="1xl"
+                  className="project-description"
+                >
+                  A web application that provides educational content and
+                  resources related to mental health.
                 </Text>
               </Box>
               <Flex justifyContent={"center"}>
-                <Text color="#fc5130" fontWeight="bold">
-                  TECH STACK
+                <Text
+                  color="#fc5130"
+                  fontWeight="bold"
+                  className="project-tech-stack"
+                >
+                  TECH STACK USED
                 </Text>
               </Flex>
               <Flex mt={"2%"} p={"2%"} borderRadius="md" color="white">
@@ -82,6 +100,7 @@ const MotionComponent1 = () => {
                 <Flex mr="10%">
                   <Link
                     href="https://github.com/anagpure28/adhesive-caption-1992/tree/main/imind"
+                    className="project-github-link"
                     isExternal
                   >
                     <Button
@@ -98,7 +117,11 @@ const MotionComponent1 = () => {
                 </Flex>
 
                 <Flex>
-                  <Link href="https://imind.vercel.app/" isExternal>
+                  <Link
+                    className="project-deployed-link"
+                    href="https://imind.vercel.app/"
+                    isExternal
+                  >
                     <Button
                       leftIcon={<Icon as={FaExternalLinkAlt} />}
                       bg={"white"}

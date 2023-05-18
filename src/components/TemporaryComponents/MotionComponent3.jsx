@@ -20,6 +20,7 @@ const MotionComponent1 = () => {
         marginBottom: "20px",
       }}
       ref={ref}
+      className="project-card"
     >
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
@@ -47,14 +48,30 @@ const MotionComponent1 = () => {
               w="100%"
             >
               <Box p={2} borderRadius="md">
-                <Text color="white" fontSize="1.2xl">
-                  <b>POSHSTROM - NORDSTROM CLONE :</b>Is an international Online
-                  Shopping Store.
+                <Text
+                  color="#fc5130"
+                  fontSize="1.2xl"
+                  fontWeight="extrabold"
+                  letterSpacing="1px"
+                  className="project-title"
+                >
+                  <u>POSHSTROM - NORDSTROM CLONE</u>
+                </Text>
+                <Text
+                  color="white"
+                  fontSize="1xl"
+                  className="project-description"
+                >
+                  Nordstrom is an international Online Shopping Store.
                 </Text>
               </Box>
               <Flex justifyContent={"center"}>
-                <Text color="#fc5130" fontWeight="bold">
-                  TECH STACK
+                <Text
+                  color="#fc5130"
+                  fontWeight="bold"
+                  className="project-tech-stack"
+                >
+                  TECH STACK USED
                 </Text>
               </Flex>
               <Flex
@@ -72,6 +89,7 @@ const MotionComponent1 = () => {
                 <Flex mr="10%">
                   <Link
                     href="https://github.com/vishal-girhepunje/Nordstrom-Clone"
+                    className="project-github-link"
                     isExternal
                   >
                     {" "}
@@ -91,6 +109,7 @@ const MotionComponent1 = () => {
                 <Flex>
                   <Link
                     href="https://elegant-lebkuchen-d12793.netlify.app/index.html"
+                    className="project-deployed-link"
                     isExternal
                   >
                     <Button

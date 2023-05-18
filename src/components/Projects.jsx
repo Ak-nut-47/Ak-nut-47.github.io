@@ -9,7 +9,7 @@ import ProjectsHeading from "./ProjectsSectionComponents/ProjectsHeading";
 
 const Projects = ({ projectRef }) => {
   return (
-    <Flex direction="column" ref={projectRef}>
+    <Flex direction="column" ref={projectRef} id="projects">
       <ProjectsHeading text={"Projects"} />
       <MotionComponent1 />
       <MotionComponent2 />

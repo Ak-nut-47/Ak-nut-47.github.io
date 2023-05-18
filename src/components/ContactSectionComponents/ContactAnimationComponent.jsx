@@ -69,16 +69,24 @@ const ContactAnimationComponent = () => {
 
             <Flex align="center" mb="2">
               <RiMailLine size={20} />
-              <Text ml="2">animesh.kalita22@gmail.com</Text>
+              <Text ml="2" id="contact-email">
+                animesh.kalita22@gmail.com
+              </Text>
             </Flex>
 
             <Flex align="center" mb="2">
               <RiPhoneLine size={20} />
-              <Text ml="2">+91-7002238284</Text>
+              <Text ml="2" id="contact-phone">
+                +91-7002238284
+              </Text>
             </Flex>
 
             <Flex mt="4">
-              <Link href="https://github.com/Ak-nut-47" isExternal>
+              <Link
+                href="https://github.com/Ak-nut-47"
+                id="contact-github"
+                isExternal
+              >
                 <Button
                   as={motion.button}
                   variants={buttonVariants}
@@ -96,6 +104,7 @@ const ContactAnimationComponent = () => {
 
               <Link
                 href="https://www.linkedin.com/in/animesh-kalita-3501b478/"
+                id="contact-linkedin"
                 isExternal
               >
                 <Button

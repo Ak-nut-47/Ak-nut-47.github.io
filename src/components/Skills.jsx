@@ -3,7 +3,7 @@ import React from "react";
 
 const Skills = ({ skillsRef }) => {
   return (
-    <Box minH="100vh" ref={skillsRef} pt="60px">
+    <Box minH="100vh" ref={skillsRef} pt="60px" id="skills">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
       repudiandae eius quas voluptatem labore exercitationem tempore nemo optio
       a ipsa consequatur ipsum ut doloribus veniam, provident repellat molestiae

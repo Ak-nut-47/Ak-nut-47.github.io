@@ -6,7 +6,7 @@ import ProjectsHeading from "./ProjectsSectionComponents/ProjectsHeading";
 
 const Contact = ({ contactRef }) => {
   return (
-    <Flex direction={"column"} ref={contactRef}>
+    <Flex direction={"column"} ref={contactRef} id="contact">
       <Center mb="20px">
         <ProjectsHeading text={"Contacts"} />
       </Center>

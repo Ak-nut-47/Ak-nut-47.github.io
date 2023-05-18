@@ -24,6 +24,7 @@ const MotionComponent2 = () => {
         marginBottom: "20px",
       }}
       ref={ref}
+      className="project-card"
     >
       <motion.div
         animate={{
@@ -49,14 +50,31 @@ const MotionComponent2 = () => {
               w="100%"
             >
               <Box p={2} borderRadius="md">
-                <Text color="white" fontSize="1.2xl">
-                  <b>MED EASE :</b>E-pharmacy website, providing easy access to
-                  essential medicine from the comfort of home.
+                <Text
+                  color="#fc5130"
+                  fontSize="1.2xl"
+                  fontWeight="extrabold"
+                  letterSpacing="1px"
+                  className="project-title"
+                >
+                  <u>MED EASE</u>
+                </Text>
+                <Text
+                  color="white"
+                  fontSize="1xl"
+                  className="project-description"
+                >
+                  E-pharmacy website, providing easy access to essential
+                  medicine from the comfort of home.
                 </Text>
               </Box>
               <Flex justifyContent={"center"}>
-                <Text color="#fc5130" fontWeight="bold">
-                  TECH STACK
+                <Text
+                  color="#fc5130"
+                  fontWeight="bold"
+                  className="project-tech-stack"
+                >
+                  TECH STACK USED
                 </Text>
               </Flex>
               <Flex mt={"2%"} p={"2%"} borderRadius="md" color="white">
@@ -71,6 +89,7 @@ const MotionComponent2 = () => {
                 <Flex mr="10%">
                   <Link
                     href="https://github.com/Ak-nut-47/innate-earth-4569/tree/main"
+                    className="project-github-link"
                     isExternal
                   >
                     {" "}
@@ -88,7 +107,11 @@ const MotionComponent2 = () => {
                 </Flex>
 
                 <Flex>
-                  <Link href="https://medease.netlify.app/" isExternal>
+                  <Link
+                    href="https://medease.netlify.app/"
+                    className="project-deployed-link"
+                    isExternal
+                  >
                     <Button
                       leftIcon={<Icon as={FaExternalLinkAlt} />}
                       bg={"white"}

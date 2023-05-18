@@ -21,6 +21,7 @@ const MotionComponent2 = () => {
         marginBottom: "20px",
       }}
       ref={ref}
+      className="project-card"
     >
       <motion.div
         animate={{
@@ -46,15 +47,31 @@ const MotionComponent2 = () => {
               w="100%"
             >
               <Box p={2} borderRadius="md">
-                <Text color="white" fontSize="1.2xl">
-                  <b>BED BATH & BEYOND :</b>E-commerce website, providing
-                  high-quality bed mattresses, toiletries, and kitchen
-                  accessories.
+                <Text
+                  color="#fc5130"
+                  fontSize="1.2xl"
+                  fontWeight="extrabold"
+                  letterSpacing="1px"
+                  className="project-title"
+                >
+                  <u>BED BATH & BEYOND </u>
+                </Text>
+                <Text
+                  color="white"
+                  fontSize="1xl"
+                  className="project-description"
+                >
+                  E-commerce website, providing high-quality bed mattresses,
+                  toiletries, and kitchen accessories.
                 </Text>
               </Box>
               <Flex justifyContent={"center"}>
-                <Text color="#fc5130" fontWeight="bold">
-                  TECH STACK
+                <Text
+                  color="#fc5130"
+                  fontWeight="bold"
+                  className="project-tech-stack"
+                >
+                  TECH STACK USED
                 </Text>
               </Flex>
               <Flex
@@ -72,6 +89,7 @@ const MotionComponent2 = () => {
                 <Flex mr="10%">
                   <Link
                     href="https://github.com/Ak-nut-47/pacific-clam-4161"
+                    className="project-github-link"
                     isExternal
                   >
                     {" "}
@@ -91,6 +109,7 @@ const MotionComponent2 = () => {
                 <Flex>
                   <Link
                     href="https://hilarious-quokka-b627d9.netlify.app/"
+                    className="project-deployed-link"
                     isExternal
                   >
                     <Button

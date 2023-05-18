@@ -40,6 +40,7 @@ const RoomComponent = () => {
             backgroundPosition="center"
             // filter="grayscale(1)"
             // transform="rotate(-10deg)"
+            class="home-img"
           />
         </Box>
       </Box>

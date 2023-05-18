@@ -5,7 +5,7 @@ import GlassEffectComponent from "./TemporaryComponents/GlassEffectComponent";
 
 const About = ({ aboutRef }) => {
   return (
-    <div ref={aboutRef}>
+    <div ref={aboutRef} id="about" class="about section">
       <RoomComponent />
     </div>
   );
