@@ -14,6 +14,8 @@
     "framer-motion": "^10.11.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "react-intersection-observer": "^9.4.3",
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
@@ -47,5 +49,5 @@
   "devDependencies": {
     "gh-pages": "^5.0.0"
   },
-  "homepage": "https://ak-nut-47.github.io/"
+  "homepage": "https://ak-nut-47.github.io/Ak-nut-47.github.io"
 }

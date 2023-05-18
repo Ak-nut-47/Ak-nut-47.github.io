@@ -16,16 +16,31 @@ import {
   Button,
 } from "@chakra-ui/react";
 
-const Navbar = () => {
+const Navbar = ({
+  scrollToSection,
+  scrollToHome,
+  scrollToSkills,
+  scrollToProject,
+  scrollToContact,
+}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [show, setShow] = useState(false);
   const handleToggle = () => setShow(!show);
 
-  const bg = useColorModeValue("#30BCED", "gray.800");
-  const color = useColorModeValue("gray.800", "white");
+  const bg = useColorModeValue("#303036", "gray.800");
+  const color = useColorModeValue("white", "white");
 
   return (
-    <Box bg={bg} px={4} boxShadow="md" color={color}>
+    <Box
+      bg={bg}
+      px={4}
+      boxShadow="md"
+      color={color}
+      position="sticky"
+      top="0px"
+      left="0px"
+      zIndex={100}
+    >
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <IconButton
           size={"md"}
@@ -35,32 +50,52 @@ const Navbar = () => {
           onClick={isOpen ? onClose : onOpen}
           bg={bg}
         />
-        <HStack spacing={8} alignItems={"center"}>
+        <Flex
+          spacing={8}
+          alignItems={"center"}
+          justifyContent="space-evenly"
+          w="100%"
+        >
           <Box>
-            <Text fontSize="lg" fontWeight="bold">
-              My Portfolio
+            <Text
+              fontSize="2xl"
+              fontWeight="bolder"
+              fontFamily="calligraffitti"
+            >
+              Animesh
             </Text>
           </Box>
           <Box display={{ base: "none", md: "flex" }}>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/about">About Me</NavLink>
-            <NavLink to="/skills">Skills</NavLink>
-            <NavLink to="/projects">Projects</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
+            <Box onClick={scrollToHome}>
+              <NavLink to="/">Home</NavLink>
+            </Box>
+            <Box onClick={scrollToSection}>
+              <NavLink to="/about">About Me</NavLink>
+            </Box>
+
+            <Box onClick={scrollToSkills}>
+              <NavLink to="/skills">Skills</NavLink>
+            </Box>
+            <Box onClick={scrollToProject}>
+              <NavLink to="/projects">Projects</NavLink>
+            </Box>
+            <Box onClick={scrollToContact}>
+              <NavLink to="/contact">Contact</NavLink>
+            </Box>
             <NavLink to="/resume">Resume</NavLink>
           </Box>
-        </HStack>
-        <Box display={{ base: "none", md: "flex" }}>
-          <Button
-            colorScheme="black"
-            variant="outline"
-            _hover={{
-              color: "white",
-            }}
-          >
-            Resume
-          </Button>
-        </Box>
+          <Box display={{ base: "none", md: "flex" }}>
+            <Button
+              colorScheme="black"
+              variant="outline"
+              _hover={{
+                color: "white",
+              }}
+            >
+              Resume
+            </Button>
+          </Box>
+        </Flex>
       </Flex>
 
       {isOpen ? (

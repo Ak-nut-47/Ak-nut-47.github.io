@@ -1,0 +1,29 @@
+.Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .box {
+    width: 300px;
+    height: 300px;
+    background-color: #303036;
+    border: 1px solid #fc5130;
+    transition: box-shadow 0.3s ease;
+    animation: slideIn 1s forwards;
+  }
+  
+  .box:hover {
+    box-shadow: 0 0 10px rgba(252, 81, 48, 0.8);
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-299px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
