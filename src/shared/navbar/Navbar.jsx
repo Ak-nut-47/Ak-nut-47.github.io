@@ -68,32 +68,32 @@ const Navbar = ({
           </Box>
           <Box display={{ base: "none", md: "flex" }}>
             <Box onClick={scrollToHome}>
-              <NavLink to="/" className="nav-link home">
+              <NavLink to="/" className="nav-link.home">
                 Home
               </NavLink>
             </Box>
             <Box onClick={scrollToSection}>
-              <NavLink className="nav-link about" to="/about">
+              <NavLink className="nav-link.about" to="/about">
                 About Me
               </NavLink>
             </Box>
 
             <Box onClick={scrollToSkills}>
-              <NavLink className="nav-link skills" to="/skills">
+              <NavLink className="nav-link.skills" to="/skills">
                 Skills
               </NavLink>
             </Box>
             <Box onClick={scrollToProject}>
-              <NavLink to="/projects" className="nav-link projects">
+              <NavLink to="/projects" className="nav-link.projects">
                 Projects
               </NavLink>
             </Box>
             <Box onClick={scrollToContact}>
-              <NavLink to="/contact" className="nav-link contact">
+              <NavLink to="/contact" className="nav-link.contact">
                 Contact
               </NavLink>
             </Box>
-            <NavLink to="/resume" className="nav-link resume">
+            <NavLink to="/resume" className="nav-link.resume">
               Resume
             </NavLink>
           </Box>
