@@ -12,7 +12,7 @@ const DiamondImage = () => {
         borderRadius="md"
         width="25%"
       >
-        <Image className=".home-img" src={imageUrl} height="fit-content" />
+        <Image className="home-img" src={imageUrl} height="fit-content" />
       </Box>
     </Flex>
   );

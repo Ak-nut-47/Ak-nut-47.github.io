@@ -1,13 +1,14 @@
 import { useColorModeValue, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
-const NavLink = ({ to, children }) => {
+const NavLink = ({ to, children, className }) => {
   const linkColor = useColorModeValue("#FFFAFF", "gray.200");
   const activeLinkColor = useColorModeValue("#FC5130", "#30BCED");
 
   return (
     <Link
       to={to}
+      className={className}
       exact
       activeClassName="active"
       _hover={{

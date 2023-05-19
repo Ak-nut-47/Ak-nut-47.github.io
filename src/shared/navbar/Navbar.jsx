@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 import NavLink from "./NavLink";
 import NavLinkMobile from "./NavLinkMobile";
@@ -14,6 +13,7 @@ import {
   HStack,
   Stack,
   Button,
+  Link,
 } from "@chakra-ui/react";
 
 const Navbar = ({
@@ -29,6 +29,8 @@ const Navbar = ({
 
   const bg = useColorModeValue("#303036", "gray.800");
   const color = useColorModeValue("white", "white");
+  const resumeUrl =
+    "https://drive.google.com/uc?export=download&id=1iyMsm1_oPvMdpdoD_4pi8J1oELLerkh4";
 
   return (
     <Box
@@ -67,46 +69,57 @@ const Navbar = ({
             </Text>
           </Box>
           <Box display={{ base: "none", md: "flex" }}>
-            <Box onClick={scrollToHome} className="nav-link.home">
+            <Box onClick={scrollToHome}>
               <NavLink to="/" className="nav-link.home">
                 Home
               </NavLink>
             </Box>
-            <Box onClick={scrollToSection} className="nav-link.about">
+            <Box onClick={scrollToSection}>
               <NavLink className="nav-link.about" to="/about">
                 About Me
               </NavLink>
             </Box>
 
-            <Box onClick={scrollToSkills} className="nav-link.skills">
+            <Box onClick={scrollToSkills}>
               <NavLink className="nav-link.skills" to="/skills">
                 Skills
               </NavLink>
             </Box>
-            <Box onClick={scrollToProject} className="nav-link.projects">
+            <Box onClick={scrollToProject}>
               <NavLink to="/projects" className="nav-link.projects">
                 Projects
               </NavLink>
             </Box>
-            <Box onClick={scrollToContact} className="nav-link.contact">
+            <Box onClick={scrollToContact}>
               <NavLink to="/contact" className="nav-link.contact">
                 Contact
               </NavLink>
             </Box>
-            <NavLink to="/resume" className="nav-link.resume">
+            <NavLink
+              to="https://drive.google.com/uc?export=download&id=1iyMsm1_oPvMdpdoD_4pi8J1oELLerkh4"
+              className="nav-link.resume"
+            >
               Resume
             </NavLink>
           </Box>
           <Box display={{ base: "none", md: "flex" }}>
-            <Button
-              colorScheme="black"
-              variant="outline"
-              _hover={{
-                color: "white",
-              }}
+            <Link
+              className="nav-link.resume"
+              href={resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              download
             >
-              Resume
-            </Button>
+              <Button
+                colorScheme="black"
+                variant="outline"
+                _hover={{
+                  color: "white",
+                }}
+              >
+                Resume
+              </Button>
+            </Link>
           </Box>
         </Flex>
       </Flex>
