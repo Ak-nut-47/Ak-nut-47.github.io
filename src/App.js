@@ -7,6 +7,7 @@ import Contact from './components/Contact';
 import { useRef } from 'react';
 import Home from './components/Home';
 import Skills from './components/Skills';
+import Statistics from './components/Statistics';
 
 function App() {
   const aboutRef = useRef(null);
@@ -38,6 +39,7 @@ function App() {
       <Skills skillsRef={skillsRef} />
       <Projects projectRef={projectRef} />
       <Contact contactRef={contactRef} />
+      <Statistics />
     </div>
   );
 }

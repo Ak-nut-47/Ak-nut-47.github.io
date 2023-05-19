@@ -34,7 +34,7 @@ const Navbar = ({
     <Box
       bg={bg}
       px={4}
-      boxShadow="md"
+      boxShadow="0px 2px 10px rgba(51, 50, 50, 0.8), 0px 4px 20px rgba(147, 144, 144, 0.6), 0px 8px 40px rgba(209, 208, 208, 0.4), 0px 16px 80px rgba(251, 250, 250, 0.2), 0px 32px 160px rgba(247, 245, 245, 0.1)" // Update the boxShadow property
       color={color}
       position="sticky"
       top="0px"
@@ -67,28 +67,28 @@ const Navbar = ({
             </Text>
           </Box>
           <Box display={{ base: "none", md: "flex" }}>
-            <Box onClick={scrollToHome}>
+            <Box onClick={scrollToHome} className="nav-link.home">
               <NavLink to="/" className="nav-link.home">
                 Home
               </NavLink>
             </Box>
-            <Box onClick={scrollToSection}>
+            <Box onClick={scrollToSection} className="nav-link.about">
               <NavLink className="nav-link.about" to="/about">
                 About Me
               </NavLink>
             </Box>
 
-            <Box onClick={scrollToSkills}>
+            <Box onClick={scrollToSkills} className="nav-link.skills">
               <NavLink className="nav-link.skills" to="/skills">
                 Skills
               </NavLink>
             </Box>
-            <Box onClick={scrollToProject}>
+            <Box onClick={scrollToProject} className="nav-link.projects">
               <NavLink to="/projects" className="nav-link.projects">
                 Projects
               </NavLink>
             </Box>
-            <Box onClick={scrollToContact}>
+            <Box onClick={scrollToContact} className="nav-link.contact">
               <NavLink to="/contact" className="nav-link.contact">
                 Contact
               </NavLink>
@@ -114,12 +114,28 @@ const Navbar = ({
       {isOpen ? (
         <Box pb={4} display={{ md: "none" }}>
           <Stack as={"nav"} spacing={4}>
-            <NavLinkMobile to="/">Home</NavLinkMobile>
-            <NavLinkMobile to="/about">About Me</NavLinkMobile>
-            <NavLinkMobile to="/skills">Skills</NavLinkMobile>
-            <NavLinkMobile to="/projects">Projects</NavLinkMobile>
-            <NavLinkMobile to="/contact">Contact</NavLinkMobile>
-            <NavLinkMobile to="/resume">Resume</NavLinkMobile>
+            <Box onClick={scrollToHome}>
+              <NavLinkMobile className="nav-link.home" to="/">
+                Home
+              </NavLinkMobile>
+            </Box>
+            <NavLinkMobile className="nav-link.about" to="/about">
+              About Me
+            </NavLinkMobile>
+            <NavLinkMobile className="nav-link.skills" to="/skills">
+              Skills
+            </NavLinkMobile>
+            <Box onClick={scrollToProject}>
+              <NavLinkMobile className="nav-link.projects" to="/projects">
+                Projects
+              </NavLinkMobile>
+            </Box>
+            <NavLinkMobile className="nav-link.contact" to="/contact">
+              Contact
+            </NavLinkMobile>
+            <NavLinkMobile className="nav-link.resume" to="/resume">
+              Resume
+            </NavLinkMobile>
           </Stack>
         </Box>
       ) : null}
