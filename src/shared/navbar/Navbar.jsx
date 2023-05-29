@@ -26,7 +26,7 @@ const Navbar = ({
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [show, setShow] = useState(false);
   const handleToggle = () => setShow(!show);
-
+  const linkColor = useColorModeValue("#FFFAFF", "gray.200");
   const bg = useColorModeValue("#303036", "gray.800");
   const color = useColorModeValue("white", "white");
   const resumeUrl =
@@ -85,26 +85,33 @@ const Navbar = ({
                 Skills
               </NavLink>
             </Box>
-            <Box onClick={scrollToProject}>
-              <NavLink to="/projects" className="nav-link.projects">
-                Projects
-              </NavLink>
+            <Box onClick={scrollToProject} className="nav-link.projects">
+              <NavLink to="/projects">Projects</NavLink>
             </Box>
-            <Box onClick={scrollToContact}>
-              <NavLink to="/contact" className="nav-link.contact">
-                Contact
-              </NavLink>
+            <Box onClick={scrollToContact} className="nav-link.contact">
+              <Link to="/contact" exact activeClassName="active">
+                <Text px={2} py={1} fontWeight="bold" color={linkColor}>
+                  Contact
+                </Text>
+              </Link>
             </Box>
-            <NavLink
-              to="https://drive.google.com/uc?export=download&id=1iyMsm1_oPvMdpdoD_4pi8J1oELLerkh4"
+            <Link
               className="nav-link.resume"
+              id="resume-button-1"
+              href={resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              download
             >
-              Resume
-            </NavLink>
+              <Text px={2} py={1} fontWeight="bold" color={linkColor}>
+                Resume
+              </Text>
+            </Link>
           </Box>
           <Box display={{ base: "none", md: "flex" }}>
             <Link
               className="nav-link.resume"
+              id="resume-button-2"
               href={resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -128,27 +135,15 @@ const Navbar = ({
         <Box pb={4} display={{ md: "none" }}>
           <Stack as={"nav"} spacing={4}>
             <Box onClick={scrollToHome}>
-              <NavLinkMobile className="nav-link.home" to="/">
-                Home
-              </NavLinkMobile>
+              <NavLinkMobile to="/">Home</NavLinkMobile>
             </Box>
-            <NavLinkMobile className="nav-link.about" to="/about">
-              About Me
-            </NavLinkMobile>
-            <NavLinkMobile className="nav-link.skills" to="/skills">
-              Skills
-            </NavLinkMobile>
+            <NavLinkMobile to="/about">About Me</NavLinkMobile>
+            <NavLinkMobile to="/skills">Skills</NavLinkMobile>
             <Box onClick={scrollToProject}>
-              <NavLinkMobile className="nav-link.projects" to="/projects">
-                Projects
-              </NavLinkMobile>
+              <NavLinkMobile to="/projects">Projects</NavLinkMobile>
             </Box>
-            <NavLinkMobile className="nav-link.contact" to="/contact">
-              Contact
-            </NavLinkMobile>
-            <NavLinkMobile className="nav-link.resume" to="/resume">
-              Resume
-            </NavLinkMobile>
+            <NavLinkMobile to="/contact">Contact</NavLinkMobile>
+            <NavLinkMobile to="/resume">Resume</NavLinkMobile>
           </Stack>
         </Box>
       ) : null}
