@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.7c3834d3.js",
+    "main.js": "/static/js/main.7784bdb1.js",
     "static/js/787.b4224f61.chunk.js": "/static/js/787.b4224f61.chunk.js",
     "static/media/Recovery.png": "/static/media/Recovery.bb2851126df23c2d2642.png",
     "static/media/BedBath&Beyond.png": "/static/media/BedBath&Beyond.5a9f527e1c7a103f037b.png",
     "static/media/Poshstorm.png": "/static/media/Poshstorm.20cadc360f0548b5bd64.png",
     "static/media/MedEase.png": "/static/media/MedEase.e4353353b8f6deb17884.png",
     "static/media/styled-components.png": "/static/media/styled-components.0fefccb0a398bba44766.png",
+    "static/media/wallpaper.jpg": "/static/media/wallpaper.643fef5e921765802ae1.jpg",
     "static/media/CSS.png": "/static/media/CSS.4e67641bb68b658d9b2b.png",
     "static/media/html.png": "/static/media/html.b1dec229046be97387a4.png",
     "static/media/React.png": "/static/media/React.fd373eec9017cf21b26d.png",
@@ -16,11 +17,11 @@
     "static/media/react icons.svg": "/static/media/react icons.436f72057a77e5b2a88b8573843b5dff.svg",
     "index.html": "/index.html",
     "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.7c3834d3.js.map": "/static/js/main.7c3834d3.js.map",
+    "main.7784bdb1.js.map": "/static/js/main.7784bdb1.js.map",
     "787.b4224f61.chunk.js.map": "/static/js/787.b4224f61.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.7c3834d3.js"
+    "static/js/main.7784bdb1.js"
   ]
 }
