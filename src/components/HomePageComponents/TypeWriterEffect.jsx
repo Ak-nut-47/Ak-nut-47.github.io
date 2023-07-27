@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import Typewriter from "typewriter-effect";
 
 const TypewriterEffect = () => {
@@ -11,7 +11,7 @@ const TypewriterEffect = () => {
 
   return (
     <Box
-      bg="#46464a"
+      bg="#111111"
       p={6}
       color="white"
       fontFamily="Poppins, sans-serif"
@@ -19,9 +19,27 @@ const TypewriterEffect = () => {
       borderRadius="md"
       boxShadow="none"
     >
-      <Text fontSize="3xl" fontWeight="bold" mb={2}>
+      <Text
+        fontSize={{
+          base: "sm",
+          sm: "md",
+          md: "lg",
+          lg: "2xl",
+          xl: "3xl",
+        }}
+        fontWeight="bold"
+        mb={2}
+      >
         <Text> Hi There !</Text>
-        <Text fontSize="6xl">
+        <Text
+          fontSize={{
+            base: "md",
+            sm: "lg",
+            md: "xl",
+            lg: "4xl",
+            xl: "6xl",
+          }}
+        >
           I AM{" "}
           <span id="user-detail-name" style={{ color: "#30bced" }}>
             ANIMESH KALITA
@@ -30,9 +48,14 @@ const TypewriterEffect = () => {
       </Text>
 
       <Text
-        fontSize="2rem" // Adjust the font size here
+        fontSize={{
+          base: "sm",
+          sm: "md",
+          md: "lg",
+          lg: "2xl",
+          xl: "3xl",
+        }}
         textShadow="2px 2px 4px rgba(0, 0, 0, 0.4)" // Adjust the shadow properties here
-        id="user-detail-intro"
       >
         <Typewriter
           options={{

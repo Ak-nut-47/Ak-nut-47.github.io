@@ -10,7 +10,12 @@ import {
   IconButton,
   createIcon,
 } from "@chakra-ui/react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaRegFileAlt,
+  FaRegFilePdf,
+} from "react-icons/fa";
 
 export default function CallToActionWithVideo() {
   return (
@@ -18,7 +23,7 @@ export default function CallToActionWithVideo() {
       <Stack
         align={"center"}
         spacing={{ base: 8, md: 10 }}
-        py={{ base: 20, md: 28 }}
+        py={{ base: 5, md: 10 }}
         direction={{ base: "column", md: "row" }}
       >
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
@@ -48,17 +53,17 @@ export default function CallToActionWithVideo() {
               About me!
             </Text>
           </Heading>
-          <Text color={"gray.200"}>
-            I'm Animesh, a passionate MERN stack developer with expertise in
-            React. Over the years, I've gained extensive experience in
-            developing front-end applications using modern tools like Redux,
-            React Router, and Chakra Library. <br /> I prioritize clean code and
-            follow best practices to create maintainable and scalable
-            applications. With a strong foundation in HTML, CSS, and JavaScript,
-            I excel in crafting pixel-perfect and responsive interfaces.
-            Additionally, my knowledge of backend technologies like Node.js and
-            Express allows me to collaborate effectively and build full-stack
-            applications.
+          <Text color={"gray.200"} id="user-detail-intro">
+            <span> I'm Animesh Kalita</span>, a passionate MERN stack developer
+            with expertise in React. Over the years, I've gained extensive
+            experience in developing front-end applications using modern tools
+            like Redux, React Router, and Chakra Library. <br /> I prioritize
+            clean code and follow best practices to create maintainable and
+            scalable applications. With a strong foundation in HTML, CSS, and
+            JavaScript, I excel in crafting pixel-perfect and responsive
+            interfaces. Additionally, my knowledge of backend technologies like
+            Node.js and Express allows me to collaborate effectively and build
+            full-stack applications.
           </Text>
           <Stack
             spacing={{ base: 4, sm: 6 }}
@@ -106,6 +111,32 @@ export default function CallToActionWithVideo() {
             >
               LinkedIn
             </Button>
+            <Button
+              // id="resume-button-1"
+              id="resume-link-2"
+              rounded={"xl"}
+              size={"lg"}
+              fontWeight={"normal"}
+              px={6}
+              colorScheme={"red"}
+              bg={"red.500"}
+              _hover={{ bg: "red.700" }}
+              leftIcon={<FaRegFilePdf size={22} />}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              as="a"
+              href="https://drive.google.com/uc?export=download&id=1iyMsm1_oPvMdpdoD_4pi8J1oELLerkh4"
+              target="_blank"
+              rel="noopener noreferrer"
+              _focus={{ boxShadow: "none" }}
+            >
+              Resume
+            </Button>
+            {/* 
+            id="resume-button-1"
+            
+            */}
           </Stack>
         </Stack>
 

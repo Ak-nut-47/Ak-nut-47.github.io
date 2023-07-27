@@ -27,7 +27,8 @@ const Navbar = ({
   const [show, setShow] = useState(false);
   const handleToggle = () => setShow(!show);
   const linkColor = useColorModeValue("#FFFAFF", "gray.200");
-  const bg = useColorModeValue("#303036", "gray.800");
+  // const bg = useColorModeValue("#303036", "gray.800");
+  const bg = "#111111";
   const color = useColorModeValue("white", "white");
   const resumeUrl =
     "https://drive.google.com/uc?export=download&id=1iyMsm1_oPvMdpdoD_4pi8J1oELLerkh4";
@@ -36,8 +37,8 @@ const Navbar = ({
     <Box
       bg={bg}
       px={4}
-      boxShadow="0px 2px 10px rgba(51, 50, 50, 0.8), 0px 4px 20px rgba(147, 144, 144, 0.6), 0px 8px 40px rgba(209, 208, 208, 0.4), 0px 16px 80px rgba(251, 250, 250, 0.2), 0px 32px 160px rgba(247, 245, 245, 0.1)" // Update the boxShadow property
-      color={color}
+      // boxShadow="0px 2px 10px rgba(51, 50, 50, 0.8), 0px 4px 20px rgba(147, 144, 144, 0.6), 0px 8px 40px rgba(209, 208, 208, 0.4), 0px 16px 80px rgba(251, 250, 250, 0.2), 0px 32px 160px rgba(247, 245, 245, 0.1)" //
+      // color={color}
       position="sticky"
       top="0px"
       left="0px"
@@ -64,40 +65,35 @@ const Navbar = ({
               fontSize="2xl"
               fontWeight="bolder"
               fontFamily="calligraffitti"
+              color={"white"}
             >
               Animesh
             </Text>
           </Box>
           <Box display={{ base: "none", md: "flex" }}>
-            <Box onClick={scrollToHome}>
-              <NavLink to="/" className="nav-link.home">
-                Home
-              </NavLink>
+            <Box onClick={scrollToHome} className="nav-link home">
+              <NavLink>Home</NavLink>
             </Box>
-            <Box onClick={scrollToSection}>
-              <NavLink className="nav-link.about" to="/about">
-                About Me
-              </NavLink>
+            <Box onClick={scrollToSection} className="nav-link about">
+              <NavLink>About Me</NavLink>
             </Box>
 
-            <Box onClick={scrollToSkills}>
-              <NavLink className="nav-link.skills" to="/skills">
-                Skills
-              </NavLink>
+            <Box onClick={scrollToSkills} className="nav-link skills">
+              <NavLink>Skills</NavLink>
             </Box>
-            <Box onClick={scrollToProject} className="nav-link.projects">
-              <NavLink to="/projects">Projects</NavLink>
+            <Box onClick={scrollToProject} className="nav-link projects">
+              <NavLink>Projects</NavLink>
             </Box>
-            <Box onClick={scrollToContact} className="nav-link.contact">
-              <Link to="/contact" exact activeClassName="active">
+            <Box onClick={scrollToContact} className="nav-link contact">
+              <Link exact activeClassName="active">
                 <Text px={2} py={1} fontWeight="bold" color={linkColor}>
                   Contact
                 </Text>
               </Link>
             </Box>
             <Link
-              className="nav-link.resume"
-              id="resume-button-1"
+              className="nav-link resume"
+              id="resume-button-2"
               href={resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -110,7 +106,51 @@ const Navbar = ({
           </Box>
           <Box display={{ base: "none", md: "flex" }}>
             <Link
-              className="nav-link.resume"
+              // id="resume-button-1"
+              id="resume-link-1"
+              href={resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              _hover={{
+                bgColor: "white",
+                color: "black",
+              }}
+              color={"white"}
+              p={"10px 8px"}
+              borderRadius={"md"}
+              border={"1px solid white"}
+            >
+              Resume
+            </Link>
+          </Box>
+        </Flex>
+      </Flex>
+
+      {isOpen ? (
+        <Box pb={4} display={{ md: "none" }}>
+          <Stack as={"nav"} spacing={4}>
+            <Box onClick={scrollToHome} className="nav-link home">
+              <NavLinkMobile>Home</NavLinkMobile>
+            </Box>
+            <Box onClick={scrollToSection} className="nav-link about">
+              <NavLink>About Me</NavLink>
+            </Box>
+            <Box onClick={scrollToSkills} className="nav-link skills">
+              <NavLink>Skills</NavLink>
+            </Box>
+            <Box onClick={scrollToProject} className="nav-link projects">
+              <NavLinkMobile>Projects</NavLinkMobile>
+            </Box>
+            <Box onClick={scrollToContact} className="nav-link contact">
+              <Link exact activeClassName="active">
+                <Text px={2} py={1} fontWeight="bold" color={linkColor}>
+                  Contact
+                </Text>
+              </Link>
+            </Box>
+            <Link
+              className="nav-link resume"
               id="resume-button-2"
               href={resumeUrl}
               target="_blank"
@@ -127,23 +167,6 @@ const Navbar = ({
                 Resume
               </Button>
             </Link>
-          </Box>
-        </Flex>
-      </Flex>
-
-      {isOpen ? (
-        <Box pb={4} display={{ md: "none" }}>
-          <Stack as={"nav"} spacing={4}>
-            <Box onClick={scrollToHome}>
-              <NavLinkMobile to="/">Home</NavLinkMobile>
-            </Box>
-            <NavLinkMobile to="/about">About Me</NavLinkMobile>
-            <NavLinkMobile to="/skills">Skills</NavLinkMobile>
-            <Box onClick={scrollToProject}>
-              <NavLinkMobile to="/projects">Projects</NavLinkMobile>
-            </Box>
-            <NavLinkMobile to="/contact">Contact</NavLinkMobile>
-            <NavLinkMobile to="/resume">Resume</NavLinkMobile>
           </Stack>
         </Box>
       ) : null}

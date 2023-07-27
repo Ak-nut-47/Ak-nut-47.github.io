@@ -8,6 +8,8 @@ import { useRef } from 'react';
 import Home from './components/Home';
 import Skills from './components/Skills';
 import Statistics from './components/Statistics';
+import Demonavbar from './components/Demo/Demonavbar';
+import Demo2skills from './components/Demo/Demo2skills';
 
 function App() {
   const aboutRef = useRef(null);
@@ -40,6 +42,7 @@ function App() {
       <Projects projectRef={projectRef} />
       <Contact contactRef={contactRef} />
       <Statistics />
+
     </div>
   );
 }

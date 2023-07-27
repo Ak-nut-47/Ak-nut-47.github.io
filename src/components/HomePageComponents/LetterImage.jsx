@@ -6,8 +6,20 @@ const LetterImage = () => (
     position="relative"
     top="20%"
     left="20%"
-    width="200px"
-    height="200px"
+    width={{
+      base: "60px",
+      sm: "90px",
+      md: "120px",
+      lg: "150px",
+      xl: "200px",
+    }}
+    height={{
+      base: "60px",
+      sm: "90px",
+      md: "120px",
+      lg: "150px",
+      xl: "200px",
+    }}
     transform="translate(-50%, -50%)"
     cursor="pointer"
     className="letter-image"

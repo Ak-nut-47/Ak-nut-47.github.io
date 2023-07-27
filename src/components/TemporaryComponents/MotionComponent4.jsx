@@ -35,11 +35,39 @@ const MotionComponent2 = () => {
           p="1%"
           borderRadius="md"
           boxShadow=" rgba(10, 10, 10, 0.5) 10px 5px 15px"
+          flexDirection={{
+            base: "column",
+            sm: "column",
+            md: "row",
+            lg: "row",
+            xl: "row",
+          }}
+          alignItems={{
+            base: "center",
+            sm: "center",
+          }}
         >
-          <Flex w="50%" direction={"column"}>
+          <Flex
+            w={{
+              base: "100%",
+              sm: "100%",
+              md: "50%",
+              lg: "50%",
+              xl: "50%",
+            }}
+            direction={"column"}
+          >
             <Image src={image} alt="Project Screenshot" borderRadius="md" />
           </Flex>
-          <Flex w="50%">
+          <Flex
+            w={{
+              base: "100%",
+              sm: "100%",
+              md: "50%",
+              lg: "50%",
+              xl: "50%",
+            }}
+          >
             <Flex
               direction="column"
               ml={15}

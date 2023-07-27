@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-
+import { Flex } from "@chakra-ui/react";
+import GitHubCalendar from "react-github-calendar";
+import GitHubTopLanguage from "./GithubComponents/GithubTopLanguages";
 const Statistics = () => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -45,23 +47,10 @@ const Statistics = () => {
   };
 
   return (
-    <motion.div
-      color="red"
-      initial="initial"
-      animate="animate"
-      variants={containerVariants}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      {isHovered && (
-        <motion.div
-          color="green"
-          initial="initial"
-          animate="animate"
-          variants={overlayVariants}
-        />
-      )}
-    </motion.div>
+    <Flex direction={"column"}>
+      <GitHubTopLanguage />
+      <GitHubCalendar username="ak-nut-47" />
+    </Flex>
   );
 };
 
